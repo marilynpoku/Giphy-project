@@ -10,7 +10,7 @@ Made with Vanilla JavaScript and SCSS.
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git@github.com:marilynpoku/Giphy-project.git
 ```
 
 Go to the project directory
