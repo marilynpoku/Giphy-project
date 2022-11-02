@@ -1,0 +1,34 @@
+.search__results-container {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  &>div.spinner {
+    text-align: center;
+  }
+
+  &>div.error {
+    @include flex-row-center;
+  }
+
+  .gif-container {
+    width: 50%;
+    padding: .5rem .5rem;
+
+    @include responsive(tab-land) {
+      width: 33.33%;
+      padding: .4rem .4rem;
+    }
+
+    @include responsive(desktop) {
+      width: 25%;
+      padding: .3rem .3rem;
+    }
+
+    .gif {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

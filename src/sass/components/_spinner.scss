@@ -1,0 +1,17 @@
+.spinner {
+
+  @include flex-row-center;
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-blue-2;
+    animation: rotate 2s infinite linear;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    transform: translateY((.75rem));
+    margin-left: .5rem;
+  }
+}

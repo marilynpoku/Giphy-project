@@ -1,0 +1,46 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: .6rem;
+
+  &__label {
+    display: block;
+    margin: .3rem 0rem .5rem 0rem;
+    font-size: 1.3rem;
+  }
+
+  &__group {
+    width: 100%;
+    display: flex;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 1.2;
+    flex-grow: 1;
+    height: 5rem;
+    border: none;
+    padding: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    background: linear-gradient(-45deg, $color-orange-2, $color-pink-3, $color-blue-1, $color-turquoise-1);
+    background-size: 450% 450%;
+    animation: gradient 15s ease infinite;
+    height: 5rem;
+    width: 6rem;
+    border: none;
+  }
+
+  &__icon {
+    fill: $color-white;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}

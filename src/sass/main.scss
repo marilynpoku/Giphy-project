@@ -1,0 +1,20 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/cardRandom";
+@import "components/error";
+@import "components/form";
+@import "components/result";
+@import "components/spinner";
+@import "components/trending";
+
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";

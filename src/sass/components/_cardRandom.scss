@@ -1,0 +1,18 @@
+.random {
+
+  &__gif-container {
+    &>div.spinner {
+      @include flex-row-center;
+    }
+
+
+    &>div.error {
+      @include flex-row-center;
+    }
+
+    .gif {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

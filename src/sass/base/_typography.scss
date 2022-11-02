@@ -1,0 +1,43 @@
+.heading-primary {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  font-weight: 900;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, $color-primary-blue, $color-pink-1);
+  letter-spacing: .4rem;
+}
+
+.heading-secondary {
+  font-size: 1.8rem;
+  letter-spacing: 1.2;
+  margin-bottom: .3rem;
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    transform: translateY(1.2rem);
+    margin-right: -.9rem;
+  }
+}
+
+.random__heading {
+  &--icon {
+    fill: $color-orange-1;
+  }
+}
+
+.search__heading {
+  &--icon {
+    fill: $color-pink-2;
+  }
+}
+
+.trending__heading {
+  &--icon {
+    fill: $color-blue-2;
+  }
+}

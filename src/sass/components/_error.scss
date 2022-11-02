@@ -1,0 +1,18 @@
+.error {
+
+  @include flex-row-center;
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: $color-error-red;
+    transform: translateY((.75rem));
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    transform: translateY((1.3rem));
+    margin-bottom: 5rem;
+    ;
+  }
+}

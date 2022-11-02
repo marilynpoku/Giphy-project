@@ -1,0 +1,47 @@
+.nav {
+
+  padding: .2rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+
+    &::marker {
+      color: black;
+    }
+  }
+
+  &__link {
+
+    &:link,
+    &:visited {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 1.2;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 108%;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 1rem 2rem;
+      color: $color-white;
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+      text-underline-offset: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    fill: rgb(138, 43, 226);
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateY(-.8rem);
+  }
+}

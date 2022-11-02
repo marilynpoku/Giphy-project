@@ -1,0 +1,27 @@
+#random-section {
+  scroll-margin-top: 10rem;
+
+  @include responsive(desktop) {
+    margin-right: 2rem;
+  }
+}
+
+#search-section {
+  margin-top: 3rem;
+  scroll-margin-top: 10rem;
+
+  @include responsive(desktop) {
+    margin-right: 2rem;
+    margin-top: 0;
+  }
+}
+
+#trending-section {
+  margin-top: 3rem;
+  scroll-margin-top: 10rem;
+
+  @include responsive(desktop) {
+    margin-top: 0;
+  }
+
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giphy Galore</title>
+  <link rel="stylesheet" href="src/sass/main.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script type="module" src="src/js/controller.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1 class="heading-primary">Giphy Galore</h1>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#random-section" class="nav__link">
+            <svg class="nav__icon shuffle_icon">
+              <use href="src/img/icons.svg#icon-shuffle"></use>
+            </svg>
+            <span>Random</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#search-section" class="nav__link">
+            <svg class="nav__icon search_icon">
+              <use href="src/img/icons.svg#icon-search"></use>
+            </svg>
+            <span>Search</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#trending-section" class="nav__link">
+            <svg class="nav__icon  lightning_icon">
+              <use href="src/img/icons.svg#icon-lightning"></use>
+            </svg>
+            <span>Trending</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="random-section" class="random">
+      <h2 class="random__heading heading-secondary">
+        <span>
+          <svg class="random__heading--icon">
+            <use href="src/img/icons.svg#icon-robot"></use>
+          </svg>
+        </span>
+        Random Gif
+      </h2>
+      <div class="random__gif-container"></div>
+      <button class="random__btn">New Gif</button>
+    </section>
+
+    <section id="search-section" class="search">
+      <h2 class="search__heading heading-secondary">
+        <span>
+          <svg class="search__heading--icon">
+            <use href="src/img/icons.svg#icon-binoculars"></use>
+          </svg>
+        </span>
+        Search Away
+      </h2>
+      <form class="search-form">
+        <label class="search-form__label" for="search-field">Search for a giphy...</label>
+        <div class="search-form__group">
+          <input class="search-form__input" type="text" id="search-field">
+          <button class="search-form__btn">
+            <svg class="search-form__icon">
+              <use href="src/img/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <div class="search__results-container">
+      </div>
+    </section>
+
+    <section id="trending-section" class="trending">
+      <h2 class="trending__heading heading-secondary">
+        <span>
+          <svg class="trending__heading--icon">
+            <use href="src/img/icons.svg#icon-fire"></use>
+          </svg>
+        </span>
+        Trending
+      </h2>
+      <div class="trending__feed-container"></div>
+    </section>
+
+  </main>
+</body>
+
+</html>
