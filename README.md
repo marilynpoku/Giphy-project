@@ -1,10 +1,16 @@
 
+# Giphy Project
+
+Made with Vanilla JavaScript and SCSS.
+
+
+
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone git@github.com:marilynpoku/Giphy-project.git
+  git clone https://link-to-project
 ```
 
 Go to the project directory
