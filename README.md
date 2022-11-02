@@ -4,7 +4,7 @@
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone git@github.com:marilynpoku/Giphy-project.git
 ```
 
 Go to the project directory
