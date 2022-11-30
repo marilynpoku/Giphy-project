@@ -1,5 +1,6 @@
 #random-section {
   scroll-margin-top: 10rem;
+  height: 100vh;
 
   @include responsive(desktop) {
     margin-right: 2rem;
@@ -19,6 +20,7 @@
 #trending-section {
   margin-top: 3rem;
   scroll-margin-top: 10rem;
+
 
   @include responsive(desktop) {
     margin-top: 0;

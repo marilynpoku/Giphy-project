@@ -1,17 +1,16 @@
-import View from './View.js'
-import imageGridView from './imageGridView.js'
+import View from "./View.js";
+import imageGridView from "./imageGridView.js";
 
 class TrendingView extends View {
-
-  _parentEl = document.querySelector('.trending__feed-container')
+  _parentEl = document.querySelector('[data-container="trending"]');
 
   addHandler(handler) {
-    window.addEventListener('load', handler)
+    window.addEventListener("load", handler);
   }
 
   _generateMarkup() {
-    return imageGridView._generateImageMarkup(this._data)
+    return imageGridView._generateImageMarkup(this._data);
   }
 }
 
-export default new TrendingView()
+export default new TrendingView();

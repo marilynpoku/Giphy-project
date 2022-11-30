@@ -44,4 +44,9 @@
     height: 2.5rem;
     transform: translateY(-.8rem);
   }
+
+
+  @include responsive(desktop) {
+    display: none;
+  }
 }

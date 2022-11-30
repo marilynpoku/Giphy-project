@@ -1,25 +1,23 @@
-import icons from 'url:../../img/icons.svg'
+import icons from "url:../../img/icons.svg";
 
 export default class View {
-
-  _data
-  _parentEl
+  _data;
+  _parentEl;
 
   clear() {
-    this._parentEl.innerHTML = ''
+    this._parentEl.innerHTML = "";
   }
 
   render(data) {
+    if (!data) return;
 
-    if (!data) return
+    this._data = data;
 
-    this._data = data
+    const markup = this._generateMarkup();
 
-    const markup = this._generateMarkup()
+    this.clear();
 
-    this.clear()
-
-    this._parentEl.innerHTML = markup
+    this._parentEl.innerHTML = markup;
   }
 
   _generateMarkup() {
@@ -29,32 +27,31 @@ export default class View {
           alt="${this._data.title}" class="gif"
           data-src="${this._data.images.normal.webp} 1x, ${this._data.images.original.webp} 2x">
       </picture> 
-    `
+    `;
   }
 
+  //* Look into using filtering/find rather than forEach
   _loadImgs(entries, _observer) {
-
-    entries.forEach(entry => {
-      // 1. When the target is not intersecting 
-      if (!entry.isIntersecting) return
+    entries.forEach((entry) => {
+      // 1. When the target is not intersecting
+      if (!entry.isIntersecting) return;
 
       // 2. Replace stills scrcet with gif srcset (data-src)
-      entry.target.srcset = entry.target.dataset.src
-    })
+      entry.target.srcset = entry.target.dataset.src;
+    });
   }
 
   _renderLazyLoadingImages() {
-
-    // 1. Selecting all images that have a property of data-src 
-    const images = document.querySelectorAll('img[data-src]')
+    // 1. Selecting all images that have a property of data-src
+    const images = document.querySelectorAll("img[data-src]");
 
     // 2. Replacing still images with gifs
     const imgObserver = new IntersectionObserver(this._loadImgs, {
       root: null,
       threshold: 0,
-    })
+    });
 
-    images.forEach(img => imgObserver.observe(img))
+    images.forEach((img) => imgObserver.observe(img));
   }
 
   renderSpinner() {
@@ -69,12 +66,12 @@ export default class View {
           <p>Giphy's will be here in a jiffy...</p>
         </div>
       </div>
-    `
-    this.clear()
-    this._parentEl.innerHTML = markup
+    `;
+    this.clear();
+    this._parentEl.innerHTML = markup;
   }
 
-  renderError(errMsg = 'Oh no something went snap!') {
+  renderError(errMsg = "Oh no something went snap!") {
     const markup = `
       <div class="error">
         <div>
@@ -86,9 +83,9 @@ export default class View {
             <p>${errMsg}</p>
         </div>
       </div>
-    `
+    `;
 
-    this.clear()
-    this._parentEl.innerHTML = markup
+    this.clear();
+    this._parentEl.innerHTML = markup;
   }
 }
